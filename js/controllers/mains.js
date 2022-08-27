@@ -51,7 +51,7 @@ let showTask = (data, id) => {
         let btnCompletes = document.querySelectorAll(`${id} .complete`);
         for (let i = 0; i < btnCompletes.length; i++) {
             btnCompletes[i].onclick = () => {
-                completeTask(i, data, id)
+                completeTask(i, data)
             }
         }
     }
@@ -74,7 +74,7 @@ let removeTask = (i, data, id) => {
 
 // Complete the task list
 let completeTaskList = [];
-let completeTask = (index, data, ids) => {
+let completeTask = (index, data) => {
     let b = data.splice(index, 1);
     let a = { ...b };
     let { id, valueForm } = a[0];
