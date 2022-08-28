@@ -23,7 +23,6 @@ addItem.addEventListener('click', () => {
     //reverse
     document.getElementById('three').addEventListener('click', () => {
         let dataReverse = listTodo.reverseList(arrayList);
-        console.log(dataReverse)
         showTask(dataReverse, id);
     })
     QUERY('#newTask').value = '';
@@ -59,7 +58,6 @@ let showTask = (data, id) => {
     let btnRemoves = document.querySelectorAll(`${id} .remove`);
     for (let i = 0; i < btnRemoves.length; i++) {
         btnRemoves[i].onclick = () => {
-            console.log(data, i, id)
             removeTask(i, data, id)
         }
     }
